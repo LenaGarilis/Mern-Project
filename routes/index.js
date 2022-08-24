@@ -95,8 +95,13 @@ router.get("/product/add", (req, res) => {
 
 // to add product from form
 
-router.post("/product/add", (req, res) => {
-  new Product(req.body).save(() => {
+router.post("/product/add/:userid", (req, res) => {
+  let newProduct = req.body;
+  newProduct.added_by = req.params.userid;
+  console.log(newProduct);
+  console.log(req.params);
+  console.log(req.body);
+  new Product(newProduct).save(() => {
     console.log(" 1 product created from form");
     //send message to frontEnd
     res.json("1 product is created successfully");
