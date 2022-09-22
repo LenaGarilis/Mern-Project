@@ -24,7 +24,7 @@ export const Login = () => {
     axios.post("/user/login", { email, password }).then((response) => {
       console.log(response);
       setMessage(response.data.message);
-      setProducts(response.data.product_title);
+      setProducts(response.data.products);
       setUserId(response.data.user._id);
     });
   };

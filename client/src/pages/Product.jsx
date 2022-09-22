@@ -79,19 +79,4 @@ export const Product = () => {
       </h4>
     </Container>
   );
-  // <div>
-  //   <button type="button" onClick={addProduct}>
-  //     Add product
-  //   </button>
-
-  //   <div>
-  //     {products && (
-  //       <ul>
-  //         {products.map((item) => {
-  //           return <li>Title: {item.product_title}</li>;
-  //         })}
-  //       </ul>
-  //     )}
-  //   </div>
-  // </div>
 };
